@@ -3,6 +3,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import colors from 'colors';
+import morgan from 'morgan';
 
 import connectDB from './config/db.js';
 
@@ -13,9 +14,9 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 
-// if (process.env.NODE_ENV === "development") {
-//     app.use(morgan("dev"));
-// }
+if (process.env.NODE_ENV === "development") {
+    app.use(morgan("dev"));
+}
 
 // app.use('/', 'Hello World!');
 

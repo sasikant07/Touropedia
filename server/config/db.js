@@ -3,10 +3,7 @@ import mongoose from 'mongoose';
 const connectDB = async () => {
     const url = process.env.MONGO_URI;
     try {
-        const conn = await mongoose.connect(url, {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        });
+        const conn = await mongoose.connect(url);
         //console.log(process.env);//unneccessary data being exposed
         console.log(
             `MongoDB Connected: ${conn.connection.host}`.cyan.underline.bold
