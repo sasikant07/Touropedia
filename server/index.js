@@ -7,6 +7,8 @@ import morgan from 'morgan';
 
 import connectDB from './config/db.js';
 
+import userRouter from './routes/user.js';
+
 dotenv.config({path: "./config/config.env"});
 connectDB();
 
@@ -19,6 +21,7 @@ if (process.env.NODE_ENV === "development") {
 }
 
 // app.use('/', 'Hello World!');
+app.use("/users", userRouter); // http://localhost:8000/users/signup
 
 const PORT = process.env.PORT || 8000;
 
