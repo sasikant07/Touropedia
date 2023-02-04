@@ -1,0 +1,30 @@
+.header-navbar {
+    background-color: #f0e6ea;
+    height: 4rem;
+}
+
+.navbar-container {
+    margin-top: -14px;
+}
+
+.brand {
+    color: #606080;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.navbar-toggler {
+    color: #606080;
+}
+
+.logged-in-user {
+    margin-right: 30px;
+    margin-top: 17px;
+}
+
+.header-text {
+    color: #606080;
+    font-weight: 500;
+    margin-top: 14px;
+    font-size: 17px;
+}
