@@ -15,7 +15,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setLogout } from '../../redux/features/authSlice';
 
 const Header = () => {
-    const {show, setShow} = useState(false);
+    const [show, setShow] = useState(false);
     const {user} = useSelector((state) => ({...state.auth}));
 
     const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const Header = () => {
     }
 
     return (
-        <MDBNavbar fixed='top' expand="lg" className="header-navbar">
+        <MDBNavbar fixed='top' expand='lg' className="header-navbar">
             <MDBContainer className="navbar-container">
                 <MDBNavbarBrand href="/" className="brand">
                     Tourpedia
@@ -66,7 +66,7 @@ const Header = () => {
                         {user?.result?._id ? (
                             <MDBNavbarItem>
                                 <MDBNavbarLink href='/login'>
-                                    <p className="header-text" onClick={handleLogout()}>Logout</p>
+                                    <p className="header-text" onClick={handleLogout}>Logout</p>
                                 </MDBNavbarLink>
                             </MDBNavbarItem>
                         ) : (
