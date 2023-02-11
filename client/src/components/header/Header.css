@@ -4,7 +4,7 @@
 }
 
 .navbar-container {
-    margin-top: -14px;
+    margin-top: -10px;
 }
 
 .brand {
@@ -18,8 +18,7 @@
 }
 
 .logged-in-user {
-    margin-right: 30px;
-    margin-top: 17px;
+    margin-right: 320px;
 }
 
 .header-text {
@@ -27,4 +26,15 @@
     font-weight: 500;
     margin-top: 14px;
     font-size: 17px;
+}
+
+@media  (width < 1024px) {
+    .header-navbar {
+        background-color: #f0e6ea;
+        height: auto;
+    }
+
+    .logged-in-user {
+        margin-right: 0px;
+    }
 }
