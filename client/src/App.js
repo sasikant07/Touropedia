@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Header from './components/header/Header';
 import { useDispatch } from 'react-redux';
 import { setUser } from './redux/features/authSlice';
+import AddEditTour from './pages/addEditTour/AddEditTour';
 
 function App() {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/addTour" element={<AddEditTour />} />
       </Routes>
     </div>
     </BrowserRouter>
